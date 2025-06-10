@@ -38,20 +38,19 @@
   <div id="clock"></div>
 
   <script>
-  function updateClock() {
-    const now = new Date();
-    const timeString = now.toLocaleTimeString('en-US', {
-      hour: 'numeric',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: true,
-      timeZone: 'America/Chicago' // Central Time (CT)
-    });
-    document.getElementById('clock').textContent = timeString;
-  }
-  setInterval(updateClock, 1000);
-  updateClock();
-</script>
-
+    function updateClock() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true,
+        timeZone: 'America/Chicago' // Central Time
+      });
+      document.getElementById('clock').textContent = timeString;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
 </body>
 </html>
